@@ -1,0 +1,37 @@
+{
+ "country": "MU",
+ "acts": [
+  {
+   "slug": "constitution",
+   "short": "Constitution",
+   "title": "The Constitution of Mauritius",
+   "url": "https://attorneygeneral.govmu.org/Documents/Laws%20of%20Mauritius/Constitutions/THE%20CONSTITUTION,%20GN%2054%20of%201968.pdf",
+   "versions": [
+    {
+     "from": "2011-12-12",
+     "units": 135,
+     "source_url": "https://attorneygeneral.govmu.org/Documents/Laws%20of%20Mauritius/Constitutions/THE%20CONSTITUTION,%20GN%2054%20of%201968.pdf",
+     "sha256": "b2c94e397d8e08aabb41421660b6d8e7d9f8312eab47050b1fc48f5360f7feb2"
+    },
+    {
+     "from": "2014-07-17",
+     "units": 135,
+     "source_url": "https://mauritiusassembly.govmu.org/mauritiusassembly/wp-content/uploads/2023/03/act0314.pdf",
+     "sha256": "203268e6498bb75d6d4cd8844cc98f258e5e2cf0005fe602c43972805c9d2d8c"
+    },
+    {
+     "from": "2015-12-10",
+     "units": 135,
+     "source_url": "https://mauritiusassembly.govmu.org/mauritiusassembly/wp-content/uploads/2023/03/act3015.pdf",
+     "sha256": "e5099d665bd40b43d62ffe31b6ca9ef1ff3b057df081e9e17c45023b06b50115"
+    },
+    {
+     "from": "2016-12-17",
+     "units": 135,
+     "source_url": "https://mauritiusassembly.govmu.org/mauritiusassembly/wp-content/uploads/2023/03/act2816.pdf",
+     "sha256": "257b7540af04a698b84528cc80bc7bb10586451d612676e9d88cbc53c8097b85"
+    }
+   ]
+  }
+ ]
+}

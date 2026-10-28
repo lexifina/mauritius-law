@@ -1,0 +1,23 @@
+The legal texts come from official publications of the Republic of Mauritius:
+
+  The Constitution of Mauritius in the Revised Laws of Mauritius, Attorney General's Office
+  (https://attorneygeneral.govmu.org/; an earlier copy read from the Internet Archive), and the Constitution
+  amendment Acts as passed and gazetted, National Assembly of Mauritius
+  (https://mauritiusassembly.govmu.org/mauritiusassembly/index.php/acts-2/), retrieved 28 October 2026.
+
+The Attorney General's Office states: "Copyright 2011 – Government of Mauritius: As a user of the website, you may
+make copies and print out portions of the laws in compliance with the Copyright Act of Mauritius. You should not
+publish, disseminate or incorporate, in written or electronic form, the legislations for commercial use without the
+prior approval of the Solicitor General." The texts here are reproduced with that attribution and under those terms;
+no approval for commercial use has been sought. The National Assembly's site states no licence for the Acts.
+
+Changes made by Lexifina: each version was converted to one Markdown file per provision, one paragraph per line;
+spacing, quotes and dashes were normalised; running heads, page numbers and the publisher's bracketed amendment and
+editorial notes were left out; and the versions were arranged as git commits credited to the Acts that made each
+change, with the words each Act inserts placed where the Act says. The wording of the law was not changed. Neither
+the Attorney General's Office nor the National Assembly endorses this repository. Only the texts published by the
+Government of Mauritius are authoritative.
+
+Lexifina's own contributions (the arrangement of the history, the commit messages, the tables and the tools) are
+dedicated to the public domain under CC0 1.0 Universal:
+https://creativecommons.org/publicdomain/zero/1.0/legalcode
