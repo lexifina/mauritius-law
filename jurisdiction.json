@@ -1,0 +1,10 @@
+{
+  "path": "mu",
+  "code": "MU",
+  "name": "Mauritius",
+  "level": "country",
+  "repo": "https://github.com/lexifina/mauritius-law",
+  "build": "partial: Constitution 2011-2016 (4 versions: Attorney General's consolidation, Acts 3/2014, 30/2015, 28 and 30/2016); Act 10 of 2025 (s. 7(2)) not applied, commencement unconfirmed",
+  "register": "https://claude.ai/artifact/DdS9F6yqpPZtV2i7FGQhYZ",
+  "register_date": "2026-10-28"
+}
