@@ -82,7 +82,12 @@ def paragraphs(lines: list[dict]) -> list[dict]:
             last = cur['_last']
             same_page = ln['page'] == last['page']
             gap = ln['y'] - last['y'] if same_page else None
-            if ln['bold'] != cur['bold']:
+            in_note = cur['lines'][0].startswith('[') and not cur['lines'][-1].endswith(']')
+            if in_note:
+                new = False
+            elif cur['lines'][0].startswith('[') or ln['text'].startswith('['):
+                new = True  # publisher's notes are paragraphs of their own
+            elif ln['bold'] != cur['bold']:
                 new = True
             elif same_page and gap is not None and (gap > 13.5 or gap < 0):
                 new = True
@@ -94,6 +99,8 @@ def paragraphs(lines: list[dict]) -> list[dict]:
                 new = True
             elif cur['cont_x'] is None and len(cur['lines']) == 1 and not same_page and ln['x'] > cur['x0'] + 4:
                 new = True
+        if new and cur is not None and cur['lines'][0].startswith('[') and not cur['lines'][-1].endswith(']'):
+            new = False
         if new:
             if cur is not None:
                 paras.append(cur)
