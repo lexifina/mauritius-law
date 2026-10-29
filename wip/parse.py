@@ -32,10 +32,12 @@ def sha(url: str) -> str:
 def act_paras(url: str, start: str, end: str) -> list[str]:
     """The quoted provision text of an amending Act, between two anchors, one paragraph per line."""
     t = assembly.text(url)
+    t = re.sub(r'\n\s*(Acts \d{4}\s+\d+|\d+\s+Acts \d{4})\s*\n', '\n', t)
+    t = re.sub(r'\s+', ' ', t)
+    start, end = re.sub(r'\s+', ' ', start), re.sub(r'\s+', ' ', end)
     t = t[t.index(start):]
     t = t[:t.index(end) + len(end)]
-    t = re.sub(r'\n\s*(Acts \d{4}\s+\d+|\d+\s+Acts \d{4})\s*\n', '\n', t)
-    flat = R.norm(re.sub(r'-\n\s*', '', t).replace('\n', ' '))
+    flat = R.norm(t)
     parts = re.split(r'\s(?=\((?:[a-z]{1,2}|[ivx]+)\)\s)|\s(?=by way of confiscation)', flat)
     return [p.strip() for p in parts if p.strip()]
 
