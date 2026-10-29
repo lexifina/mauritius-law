@@ -58,7 +58,10 @@ def lines_of(pdf: Path, head_top: float = 70.0) -> list[dict]:
             top = spans[0]['bbox'][1]
             if top < head_top:
                 continue  # running head: "Revised Laws of Mauritius", the act's title
-            if re.fullmatch(r'(\[Issue \d+\]\s*)?[A-Z]{1,4}\d*\s*—\s*\d+[A-Z]?(\s*\[Issue \d+\])?', t) or re.fullmatch(r'\[Issue \d+\]', t):
+            # Page numbers, including inserted pages ("CON — 66 (2)") and their "continued on page CON — 67" pointer.
+            if re.fullmatch(r'(\[Issue \d+\]\s*)?[A-Z]{1,4}\d*\s*—\s*\d+[A-Z]?(\s*\(\d+\))?(\s*\[Issue \d+\])?', t) \
+                    or re.fullmatch(r'\[Issue \d+\]', t) \
+                    or re.fullmatch(r'continued on page [A-Z]{1,4}\d*\s*—\s*\d+[A-Z]?(\s*\(\d+\))?', t):
                 continue
             first = spans[0]
             enum_gap = None

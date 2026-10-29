@@ -111,7 +111,18 @@ def constitution() -> tuple[dict, dict]:
         for u in v.get('units', {}).values():
             if not u['text'].endswith('\n'):
                 u['text'] += '\n'
-    earlier = sorted({m for _, n in notes for m in re.findall(r'(?:Act|GN) \d+ of \d{4}', n)})
+    # The laws the publisher's amendment notes name as having produced the oldest text. Each becomes a law key
+    # (label only: the notes give no titles, and dates only for some, so none are filled in).
+    earlier_found = {(kind, int(num), int(year)) for _, n in notes
+                     for kind, num, year in re.findall(r'\b(Act|GN) (\d+) (?:of )?(\d{4})\b', n)}
+    earlier = []
+    for kind, num, year in sorted(earlier_found, key=lambda x: (x[2], x[1], x[0])):
+        key = f'{kind.lower()}-{year}-{num:02d}'
+        if key not in laws:
+            laws[key] = {'label': f'{"Act No." if kind == "Act" else "GN No."} {num} of {year}',
+                         'kind': 'law' if kind == 'Act' else 'decree', 'enacted': None, 'published': None,
+                         'url': None, 'temporary_until': None, 'restores': None, 'note': None}
+        earlier.append(key)
     act = {'slug': 'constitution', 'short': 'Constitution', 'title': 'The Constitution of Mauritius',
            'url': AG_CON, 'first_law': None, 'earlier_laws': earlier, 'versions': versions}
     return act, laws
