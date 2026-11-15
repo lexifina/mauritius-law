@@ -24,7 +24,8 @@ The text is in English, as the Attorney General's Office and the gazetted Acts p
 
 - **[Ask Claude about Mauritian law](https://global-law.lexifina.com/v1/try_claude?country=mauritius)**: opens Claude with a first question ready.
 - **[Ask ChatGPT](https://global-law.lexifina.com/v1/try_chatgpt?country=mauritius)**: the same question in ChatGPT.
-- **[Call the API in your browser](https://global-law.lexifina.com/v1/search_law?query=freedom+of+movement&jurisdictions=mauritius)**: a search of Mauritian law for "freedom of movement", returned as JSON. See the [documentation here](https://lexifina.com/api/global-law).
+- **[Search Mauritian law on our site](https://lexifina.com/law?country=mauritius&q=freedom+of+movement)**: a search for "freedom of movement", with each provision's text and its versions, no account needed.
+- **[Developer REST API](https://global-law.lexifina.com/v1/search_law?query=freedom+of+movement&jurisdiction=mauritius)**: the same search as JSON, with no key. See the [documentation here](https://lexifina.com/api/global-law).
 
 Both assistants read the record through the free Global law connector (MCP, `https://global-law.lexifina.com/mcp`); the first time, the chat gives you the link that adds it. Ask in English.
 
