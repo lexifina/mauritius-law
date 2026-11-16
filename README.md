@@ -58,6 +58,7 @@ Each change is credited to the Act whose own text makes it (`Act No. 28 of 2016 
 - The oldest version is the Attorney General's PDF read through its text layer, compared character by character (spacing ignored) with a second, independent extraction; the Internet Archive's capture of the PDF of 21 December 2015 holds the same text.
 - The later versions are replayed by code from the Acts as gazetted: every word each Act inserts is in that Act, placed where the Act says. A search of all 251 Acts of 2012 to 2026 on the National Assembly's site found no other Act that changes the Constitution's words, besides Act No. 10 of 2025.
 - A second build from the same corpus gave identical hashes for all 5 commits and 8 tags (see [`REPRODUCE.md`](REPRODUCE.md)).
+- [vulnerabilities/](vulnerabilities/): possible drafting mistakes in this law, found by global-law's detectors and checked by hand. Not run yet.
 
 ## What it does not show
 
@@ -80,6 +81,10 @@ Each change is credited to the Act whose own text makes it (`Act No. 28 of 2016 
 See [`LICENSE`](LICENSE). The texts are official publications of the Government of Mauritius, reproduced with the Attorney General's Office's attribution and under its terms, which allow copies of portions of the laws but not commercial use without the Solicitor General's approval; the history, commit messages, tables and tools are CC0 1.0.
 
 No AI model wrote, translated or corrected legal text; the scripts that read the sources and build this repository were written by an AI model (see [`REPRODUCE.md`](REPRODUCE.md)).
+
+## Visualisations
+
+- [visualisations/](visualisations/): charts drawn from this repository. Not drawn yet.
 
 ## More
 
